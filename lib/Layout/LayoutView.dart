@@ -8,7 +8,7 @@ import 'package:islamiapp/Time/TimeView.dart';
 import '../core/gen/assets.gen.dart';
 
 class LayoutView extends StatefulWidget {
-  LayoutView({super.key});
+  const LayoutView({super.key});
 
   @override
   State<LayoutView> createState() => _LayoutViewState();
@@ -29,13 +29,7 @@ class _LayoutViewState extends State<LayoutView> {
     return Scaffold(
       body:screens[selectedIndex] ,
       bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: const Color(0xFFE2BE7F),
-          selectedItemColor: Colors.white,
-          selectedLabelStyle: const TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-          ),
+
           showUnselectedLabels: false,
           currentIndex: selectedIndex,
           onTap: (index) {

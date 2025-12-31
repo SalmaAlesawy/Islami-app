@@ -101,6 +101,18 @@ class $AssetsImagesGen {
   AssetGenImage get timeBackground =>
       const AssetGenImage('assets/images/TimeBackground.png');
 
+  /// File path: assets/images/img_most_recent.png
+  AssetGenImage get imgMostRecent =>
+      const AssetGenImage('assets/images/img_most_recent.png');
+
+  /// File path: assets/images/img_sur_number_frame.png
+  AssetGenImage get imgSurNumberFrame =>
+      const AssetGenImage('assets/images/img_sur_number_frame.png');
+
+  /// File path: assets/images/quraan_header.png
+  AssetGenImage get quraanHeader =>
+      const AssetGenImage('assets/images/quraan_header.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         hadithBackground,
@@ -109,7 +121,10 @@ class $AssetsImagesGen {
         sebhaBackground,
         splashLogo,
         splashScreenBackground,
-        timeBackground
+        timeBackground,
+        imgMostRecent,
+        imgSurNumberFrame,
+        quraanHeader
       ];
 }
 

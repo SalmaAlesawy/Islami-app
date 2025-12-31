@@ -101,9 +101,21 @@ class $AssetsImagesGen {
   AssetGenImage get timeBackground =>
       const AssetGenImage('assets/images/TimeBackground.png');
 
+  /// File path: assets/images/img_bottom_decoration.png
+  AssetGenImage get imgBottomDecoration =>
+      const AssetGenImage('assets/images/img_bottom_decoration.png');
+
+  /// File path: assets/images/img_left_corner.png
+  AssetGenImage get imgLeftCorner =>
+      const AssetGenImage('assets/images/img_left_corner.png');
+
   /// File path: assets/images/img_most_recent.png
   AssetGenImage get imgMostRecent =>
       const AssetGenImage('assets/images/img_most_recent.png');
+
+  /// File path: assets/images/img_right_corner.png
+  AssetGenImage get imgRightCorner =>
+      const AssetGenImage('assets/images/img_right_corner.png');
 
   /// File path: assets/images/img_sur_number_frame.png
   AssetGenImage get imgSurNumberFrame =>
@@ -122,7 +134,10 @@ class $AssetsImagesGen {
         splashLogo,
         splashScreenBackground,
         timeBackground,
+        imgBottomDecoration,
+        imgLeftCorner,
         imgMostRecent,
+        imgRightCorner,
         imgSurNumberFrame,
         quraanHeader
       ];

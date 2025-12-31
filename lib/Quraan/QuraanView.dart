@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/Models/SuraData.dart';
 import 'package:islamiapp/Quraan/widgets/MostRecentlyCardWidget.dart';
+import 'package:islamiapp/Quraan/widgets/QuraanDetailsView.dart';
 import 'package:islamiapp/Quraan/widgets/SuraCardWidget.dart';
 import 'package:islamiapp/core/gen/assets.gen.dart';
 import 'package:islamiapp/core/themes/theme_Manager.dart';
@@ -466,8 +467,17 @@ class _QuraanviewState extends State<Quraanview> {
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   padding: EdgeInsets.zero,
-                  itemBuilder: (context, index) => Suracardwidget(
-                        suraData: suraList[index],
+                  itemBuilder: (context, index) => GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(
+                              (context),
+                            Quraandetailsview.routeName,
+                            arguments: suraList[index],
+                          );
+                        },
+                        child: Suracardwidget(
+                          suraData: suraList[index],
+                        ),
                       ),
                   separatorBuilder: (context, index) => const Divider(
                         indent: 40,

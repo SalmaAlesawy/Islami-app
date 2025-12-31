@@ -15,38 +15,35 @@ class Suracardwidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(
         horizontal: 16,
       ),
-      child: GestureDetector(
-        onTap: (){},
-        child: Row(
-          children: [
-            Container(
-              height: 50,
-              width: 50,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: Assets.images.imgSurNumberFrame.provider(),
-                    fit: BoxFit.cover),
-              ),
-              child: Text(
-                suraData.suraNumber,
-                style: textTheme.titleLarge,
-              ),
+      child: Row(
+        children: [
+          Container(
+            height: 50,
+            width: 50,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: Assets.images.imgSurNumberFrame.provider(),
+                  fit: BoxFit.cover),
             ),
-            const SizedBox(width: 20,),
-            Column(
-              children: [
-                Text(suraData.englishSuraName,style: textTheme.titleLarge,),
-                Text(
-                  "${suraData.ayaNumber} Verses",
-                  style: textTheme.bodyMedium,
-                ),
-              ],
+            child: Text(
+              suraData.suraNumber,
+              style: textTheme.titleLarge,
             ),
-            const Spacer(),
-             Text(suraData.arabicSuraName)
-          ],
-        ),
+          ),
+          const SizedBox(width: 20,),
+          Column(
+            children: [
+              Text(suraData.englishSuraName,style: textTheme.titleLarge,),
+              Text(
+                "${suraData.ayaNumber} Verses",
+                style: textTheme.bodyMedium,
+              ),
+            ],
+          ),
+          const Spacer(),
+           Text(suraData.arabicSuraName)
+        ],
       ),
     );
   }

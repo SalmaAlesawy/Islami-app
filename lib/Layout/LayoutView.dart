@@ -8,6 +8,7 @@ import 'package:islamiapp/Time/TimeView.dart';
 import '../core/gen/assets.gen.dart';
 
 class LayoutView extends StatefulWidget {
+  static const String routeName="/layout_view";
   const LayoutView({super.key});
 
   @override

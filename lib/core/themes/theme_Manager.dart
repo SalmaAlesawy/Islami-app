@@ -34,5 +34,16 @@ abstract class ThemeManager {
               fontFamily: "Janna",
               fontSize: 14,
               fontWeight: FontWeight.bold,
-              color: AppColors.white)));
+              color: AppColors.white)),
+      scaffoldBackgroundColor: AppColors.scaffoldBackGroundColor,
+      appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          centerTitle: true,
+          titleTextStyle: TextStyle(
+              color: AppColors.primaryColor,
+              fontFamily: "janna",
+              fontSize: 20,
+              fontWeight: FontWeight.w700),
+          iconTheme: IconThemeData(color: AppColors.primaryColor),
+          foregroundColor: AppColors.primaryColor));
 }

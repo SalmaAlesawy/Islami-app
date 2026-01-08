@@ -39,6 +39,7 @@ dependencies:
   flutter_svg: ^2.1.0
 
   vector_graphics: any
+  carousel_slider: ^5.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -67,9 +68,10 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/files/
+    - assets/files/Hadeeth/
+    - assets/files/Quraan/
   fonts:
-    - family: Janna
+    - family: "Janna"
       fonts:
         - asset: assets/fonts/Janna LT Bold.ttf
   #         style: italic

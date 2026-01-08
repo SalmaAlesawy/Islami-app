@@ -83,7 +83,7 @@ class _QuraandetailsviewState extends State<Quraandetailsview> {
   List<String> verses = [];
 
   Future<void> loadDataFromAssets(String suraNumber) async {
-    String quranText = await rootBundle.loadString("assets/files/$suraNumber.txt");
+    String quranText = await rootBundle.loadString("assets/files/Quraan/$suraNumber.txt");
 
     setState(() {
       verses = quranText.split("\n");

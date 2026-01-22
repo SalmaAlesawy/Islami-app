@@ -15,6 +15,12 @@ abstract class ThemeManager {
             fontFamily: "Janna"),
       ),
       textTheme: const TextTheme(
+          headlineMedium:TextStyle(
+            fontFamily: "Janna",
+            fontSize: 36,
+            fontWeight: FontWeight.w600,
+            color: AppColors.white
+          ),
           headlineSmall: TextStyle(
               fontFamily: "Janna",
               fontSize: 24,

@@ -40,7 +40,15 @@ abstract class ThemeManager {
               fontFamily: "Janna",
               fontSize: 14,
               fontWeight: FontWeight.bold,
-              color: AppColors.white)),
+              color: AppColors.white),
+          headlineMedium: TextStyle(
+              fontFamily: "Janna",
+              fontSize: 36,
+              fontWeight: FontWeight.w700,
+              color: AppColors.white
+        )
+
+      ),
       scaffoldBackgroundColor: AppColors.scaffoldBackGroundColor,
       appBarTheme: const AppBarTheme(
           backgroundColor: Colors.transparent,

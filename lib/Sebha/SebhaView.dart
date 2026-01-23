@@ -46,7 +46,7 @@ class _SebhaViewState extends State<SebhaView> {
               width: 291,
               height: 171,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(

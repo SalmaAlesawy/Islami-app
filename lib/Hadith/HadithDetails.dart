@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:islamiapp/Models/Hadith_data.dart';
 
 import '../core/gen/assets.gen.dart';
+import '../core/themes/AppColors.dart';
 
 class Hadithdetails extends StatefulWidget {
   final HadithData hadithData;

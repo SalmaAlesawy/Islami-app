@@ -4,6 +4,8 @@ import 'package:islamiapp/Quraan/widgets/QuraanDetailsView.dart';
 import 'package:islamiapp/Splash/Splash_view.dart';
 import 'package:islamiapp/core/themes/theme_Manager.dart';
 
+import 'OnBoarding/onboarding_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,8 +22,9 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashView.routeName,
       routes: {
         SplashView.routeName: (context) => const SplashView(),
-        Quraandetailsview.routeName:(context)=>const Quraandetailsview(),
-        LayoutView.routeName: (context)=>const LayoutView(),
+        Quraandetailsview.routeName: (context) => const Quraandetailsview(),
+        LayoutView.routeName: (context) => const LayoutView(),
+        OnBoarding.routeName: (context) => OnBoarding(),
       },
       debugShowCheckedModeBanner: false,
     );

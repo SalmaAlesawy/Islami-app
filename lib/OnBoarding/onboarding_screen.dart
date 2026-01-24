@@ -2,112 +2,127 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islamiapp/Layout/LayoutView.dart';
 import 'package:islamiapp/core/themes/AppColors.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../core/gen/assets.gen.dart';
 import 'onboarding_pages.dart';
 
 class OnBoarding extends StatefulWidget {
   static const String routeName = "/onboarding";
-  const OnBoarding({super.key});
+
+  OnBoarding({super.key});
 
   @override
   State<OnBoarding> createState() => _OnBoardingState();
 }
 
 class _OnBoardingState extends State<OnBoarding> {
-  late PageController _pageController;
-  int _pageIndex = 0;
-  List<Widget> pages = [];
+  PageController pageController = PageController();
+  late TextTheme textTheme = Theme.of(context).textTheme;
   List<PageViewModel> listPageViewModel = [
     PageViewModel(
         useScrollView: false,
         title: "",
-        bodyWidget: OnboardingPages(
-            title: "",
-            image: Assets.images.welcome.keyName,
-            description: "Welcome To Islami App")),
+        bodyWidget: Builder(
+            builder: (context) => OnboardingPages(
+                  title: "",
+                  description: "Welcome To Islmi App",
+                  image: Assets.images.welcome.keyName,
+                ))),
     PageViewModel(
-        title: "",
-        bodyWidget: OnboardingPages(
-            title: "Welcome To Islami",
-            image: Assets.images.kaapa.keyName,
-            description: "We Are Very Excited To Have You In Our Community")),
+      title: "",
+      bodyWidget: Builder(
+          builder: (context) => OnboardingPages(
+                title: "Welcome To Islami",
+                description: "We Are Very Excited To Have You In Our Community",
+                image: Assets.images.kaapa.keyName,
+              )),
+    ),
     PageViewModel(
-        title: "",
-        bodyWidget: OnboardingPages(
-            title: "Reading the Quran",
-            image: Assets.images.readingQuraan.keyName,
-            description: "Read, and your Lord is the Most Generous")),
+      title: "",
+      bodyWidget: Builder(
+          builder: (context) => OnboardingPages(
+                title: "Reading the Quran",
+                description: "Read, and your Lord is the Most Generous",
+                image: Assets.images.readingQuraan.keyName,
+              )),
+    ),
     PageViewModel(
-        title: "",
-        bodyWidget: OnboardingPages(
-            title: "Bearish",
-            image: Assets.images.bearish.keyName,
-            description: "Praise the name of your Lord, the Most High")),
+      title: "",
+      bodyWidget: Builder(
+          builder: (context) => OnboardingPages(
+                title: "Bearish",
+                description: "Praise the name of your Lord, the Most High",
+                image: Assets.images.bearish.keyName,
+              )),
+    ),
     PageViewModel(
-        title: "",
-        bodyWidget: OnboardingPages(
-            title: "Holy Quran Radio",
-            image: Assets.images.listenRadio.keyName,
-            description:
-                "You can listen to the Holy Quran Radio through the application for free and easily"))
+      title: "",
+      bodyWidget: Builder(
+          builder: (context) => OnboardingPages(
+                title: "Holy Quran Radio",
+                description:
+                    "You can listen to the Holy Quran Radio through the application for free and easily",
+                image: Assets.images.listenRadio.keyName,
+              )),
+    ),
   ];
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _pageController = PageController();
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    _pageController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Assets.images.quraanHeader.image(),
-            ),
-            SizedBox(
-              height: 600,
-              child: IntroductionScreen(
-                pages: listPageViewModel,
-                animationDuration: 1,
-                curve: Curves.easeInOutCubic,
-                freeze: false,
-                showNextButton: true,
-                next: const Text("Next"),
-                nextStyle: const ButtonStyle(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Assets.images.quraanHeader.image(width: 291, height: 171),
+          ),
+          Expanded(
+            child: IntroductionScreen(
+              pages: listPageViewModel,
+              showDoneButton: true,
+              done: const Text("Done"),
+              onDone: () {
+                Navigator.pushReplacementNamed(context, LayoutView.routeName);
+              },
+              showNextButton: true,
+              next: const Text("Next"),
+              showBackButton: true,
+              back: const Text("Back"),
+              doneStyle: const ButtonStyle(
+                  overlayColor: WidgetStatePropertyAll(Colors.transparent),
                   foregroundColor:
-                      WidgetStatePropertyAll(AppColors.primaryColor),
-                ),
-                showBackButton: true,
-                back: const Text("Back"),
-                backStyle: const ButtonStyle(
-                    foregroundColor:
-                        WidgetStatePropertyAll(AppColors.primaryColor)),
-                done: const Text("Done"),
-                doneStyle: const ButtonStyle(
-                    foregroundColor:
-                        WidgetStatePropertyAll(AppColors.primaryColor)),
-                onDone: () {
-                  Navigator.pushReplacementNamed(context, LayoutView.routeName);
-                },
-              ),
+                      WidgetStatePropertyAll(AppColors.primaryColor)),
+              backStyle: const ButtonStyle(
+                  overlayColor: WidgetStatePropertyAll(Colors.transparent),
+                  enableFeedback: false,
+                  shadowColor: WidgetStatePropertyAll(Colors.transparent),
+                  foregroundColor:
+                      WidgetStatePropertyAll(AppColors.primaryColor)),
+              nextStyle: const ButtonStyle(
+                  overlayColor: WidgetStatePropertyAll(Colors.transparent),
+                  enableFeedback: false,
+                  shadowColor: WidgetStatePropertyAll(Colors.transparent),
+                  foregroundColor:
+                      WidgetStatePropertyAll(AppColors.primaryColor))
+
+              ,
+              curve: Curves.bounceInOut,
+              dotsDecorator: DotsDecorator(
+
+                size: const Size.square(10),
+                  activeSize: const Size(20, 10),
+                  activeColor: AppColors.primaryColor,
+                  color: Colors.black26,
+                  spacing: const EdgeInsets.symmetric(horizontal: 3),
+                 shapes: List.filled(5, const RoundedRectangleBorder(side: BorderSide.none)),
+                  activeShape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(25)),
+
+
+                  shape: const CircleBorder(side: BorderSide(color: AppColors.primaryColor))),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
-    ));
+    );
   }
 }

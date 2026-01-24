@@ -12,6 +12,16 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart' as _svg;
 import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
+class $AssetsFilesGen {
+  const $AssetsFilesGen();
+
+  /// Directory path: assets/files/Hadeeth
+  $AssetsFilesHadeethGen get hadeeth => const $AssetsFilesHadeethGen();
+
+  /// Directory path: assets/files/Quraan
+  $AssetsFilesQuraanGen get quraan => const $AssetsFilesQuraanGen();
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -85,9 +95,16 @@ class $AssetsImagesGen {
   AssetGenImage get radioBackground =>
       const AssetGenImage('assets/images/RadioBackground.png');
 
+  /// File path: assets/images/Sebha.png
+  AssetGenImage get sebha => const AssetGenImage('assets/images/Sebha.png');
+
   /// File path: assets/images/SebhaBackground.png
   AssetGenImage get sebhaBackground =>
       const AssetGenImage('assets/images/SebhaBackground.png');
+
+  /// File path: assets/images/SebhaBody 1.png
+  AssetGenImage get sebhaBody1 =>
+      const AssetGenImage('assets/images/SebhaBody 1.png');
 
   /// File path: assets/images/Splash-Logo.png
   AssetGenImage get splashLogo =>
@@ -130,7 +147,9 @@ class $AssetsImagesGen {
         hadithBackground,
         quraanBackground,
         radioBackground,
+        sebha,
         sebhaBackground,
+        sebhaBody1,
         splashLogo,
         splashScreenBackground,
         timeBackground,
@@ -143,9 +162,682 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsFilesHadeethGen {
+  const $AssetsFilesHadeethGen();
+
+  /// File path: assets/files/Hadeeth/h1.txt
+  String get h1 => 'assets/files/Hadeeth/h1.txt';
+
+  /// File path: assets/files/Hadeeth/h10.txt
+  String get h10 => 'assets/files/Hadeeth/h10.txt';
+
+  /// File path: assets/files/Hadeeth/h11.txt
+  String get h11 => 'assets/files/Hadeeth/h11.txt';
+
+  /// File path: assets/files/Hadeeth/h12.txt
+  String get h12 => 'assets/files/Hadeeth/h12.txt';
+
+  /// File path: assets/files/Hadeeth/h13.txt
+  String get h13 => 'assets/files/Hadeeth/h13.txt';
+
+  /// File path: assets/files/Hadeeth/h14.txt
+  String get h14 => 'assets/files/Hadeeth/h14.txt';
+
+  /// File path: assets/files/Hadeeth/h15.txt
+  String get h15 => 'assets/files/Hadeeth/h15.txt';
+
+  /// File path: assets/files/Hadeeth/h16.txt
+  String get h16 => 'assets/files/Hadeeth/h16.txt';
+
+  /// File path: assets/files/Hadeeth/h17.txt
+  String get h17 => 'assets/files/Hadeeth/h17.txt';
+
+  /// File path: assets/files/Hadeeth/h18.txt
+  String get h18 => 'assets/files/Hadeeth/h18.txt';
+
+  /// File path: assets/files/Hadeeth/h19.txt
+  String get h19 => 'assets/files/Hadeeth/h19.txt';
+
+  /// File path: assets/files/Hadeeth/h2.txt
+  String get h2 => 'assets/files/Hadeeth/h2.txt';
+
+  /// File path: assets/files/Hadeeth/h20.txt
+  String get h20 => 'assets/files/Hadeeth/h20.txt';
+
+  /// File path: assets/files/Hadeeth/h21.txt
+  String get h21 => 'assets/files/Hadeeth/h21.txt';
+
+  /// File path: assets/files/Hadeeth/h22.txt
+  String get h22 => 'assets/files/Hadeeth/h22.txt';
+
+  /// File path: assets/files/Hadeeth/h23.txt
+  String get h23 => 'assets/files/Hadeeth/h23.txt';
+
+  /// File path: assets/files/Hadeeth/h24.txt
+  String get h24 => 'assets/files/Hadeeth/h24.txt';
+
+  /// File path: assets/files/Hadeeth/h25.txt
+  String get h25 => 'assets/files/Hadeeth/h25.txt';
+
+  /// File path: assets/files/Hadeeth/h26.txt
+  String get h26 => 'assets/files/Hadeeth/h26.txt';
+
+  /// File path: assets/files/Hadeeth/h27.txt
+  String get h27 => 'assets/files/Hadeeth/h27.txt';
+
+  /// File path: assets/files/Hadeeth/h28.txt
+  String get h28 => 'assets/files/Hadeeth/h28.txt';
+
+  /// File path: assets/files/Hadeeth/h29.txt
+  String get h29 => 'assets/files/Hadeeth/h29.txt';
+
+  /// File path: assets/files/Hadeeth/h3.txt
+  String get h3 => 'assets/files/Hadeeth/h3.txt';
+
+  /// File path: assets/files/Hadeeth/h30.txt
+  String get h30 => 'assets/files/Hadeeth/h30.txt';
+
+  /// File path: assets/files/Hadeeth/h31.txt
+  String get h31 => 'assets/files/Hadeeth/h31.txt';
+
+  /// File path: assets/files/Hadeeth/h32.txt
+  String get h32 => 'assets/files/Hadeeth/h32.txt';
+
+  /// File path: assets/files/Hadeeth/h33.txt
+  String get h33 => 'assets/files/Hadeeth/h33.txt';
+
+  /// File path: assets/files/Hadeeth/h34.txt
+  String get h34 => 'assets/files/Hadeeth/h34.txt';
+
+  /// File path: assets/files/Hadeeth/h35.txt
+  String get h35 => 'assets/files/Hadeeth/h35.txt';
+
+  /// File path: assets/files/Hadeeth/h36.txt
+  String get h36 => 'assets/files/Hadeeth/h36.txt';
+
+  /// File path: assets/files/Hadeeth/h37.txt
+  String get h37 => 'assets/files/Hadeeth/h37.txt';
+
+  /// File path: assets/files/Hadeeth/h38.txt
+  String get h38 => 'assets/files/Hadeeth/h38.txt';
+
+  /// File path: assets/files/Hadeeth/h39.txt
+  String get h39 => 'assets/files/Hadeeth/h39.txt';
+
+  /// File path: assets/files/Hadeeth/h4.txt
+  String get h4 => 'assets/files/Hadeeth/h4.txt';
+
+  /// File path: assets/files/Hadeeth/h40.txt
+  String get h40 => 'assets/files/Hadeeth/h40.txt';
+
+  /// File path: assets/files/Hadeeth/h41.txt
+  String get h41 => 'assets/files/Hadeeth/h41.txt';
+
+  /// File path: assets/files/Hadeeth/h42.txt
+  String get h42 => 'assets/files/Hadeeth/h42.txt';
+
+  /// File path: assets/files/Hadeeth/h43.txt
+  String get h43 => 'assets/files/Hadeeth/h43.txt';
+
+  /// File path: assets/files/Hadeeth/h44.txt
+  String get h44 => 'assets/files/Hadeeth/h44.txt';
+
+  /// File path: assets/files/Hadeeth/h45.txt
+  String get h45 => 'assets/files/Hadeeth/h45.txt';
+
+  /// File path: assets/files/Hadeeth/h46.txt
+  String get h46 => 'assets/files/Hadeeth/h46.txt';
+
+  /// File path: assets/files/Hadeeth/h47.txt
+  String get h47 => 'assets/files/Hadeeth/h47.txt';
+
+  /// File path: assets/files/Hadeeth/h48.txt
+  String get h48 => 'assets/files/Hadeeth/h48.txt';
+
+  /// File path: assets/files/Hadeeth/h49.txt
+  String get h49 => 'assets/files/Hadeeth/h49.txt';
+
+  /// File path: assets/files/Hadeeth/h5.txt
+  String get h5 => 'assets/files/Hadeeth/h5.txt';
+
+  /// File path: assets/files/Hadeeth/h50.txt
+  String get h50 => 'assets/files/Hadeeth/h50.txt';
+
+  /// File path: assets/files/Hadeeth/h6.txt
+  String get h6 => 'assets/files/Hadeeth/h6.txt';
+
+  /// File path: assets/files/Hadeeth/h7.txt
+  String get h7 => 'assets/files/Hadeeth/h7.txt';
+
+  /// File path: assets/files/Hadeeth/h8.txt
+  String get h8 => 'assets/files/Hadeeth/h8.txt';
+
+  /// File path: assets/files/Hadeeth/h9.txt
+  String get h9 => 'assets/files/Hadeeth/h9.txt';
+
+  /// List of all assets
+  List<String> get values => [
+        h1,
+        h10,
+        h11,
+        h12,
+        h13,
+        h14,
+        h15,
+        h16,
+        h17,
+        h18,
+        h19,
+        h2,
+        h20,
+        h21,
+        h22,
+        h23,
+        h24,
+        h25,
+        h26,
+        h27,
+        h28,
+        h29,
+        h3,
+        h30,
+        h31,
+        h32,
+        h33,
+        h34,
+        h35,
+        h36,
+        h37,
+        h38,
+        h39,
+        h4,
+        h40,
+        h41,
+        h42,
+        h43,
+        h44,
+        h45,
+        h46,
+        h47,
+        h48,
+        h49,
+        h5,
+        h50,
+        h6,
+        h7,
+        h8,
+        h9
+      ];
+}
+
+class $AssetsFilesQuraanGen {
+  const $AssetsFilesQuraanGen();
+
+  /// File path: assets/files/Quraan/1.txt
+  String get a1 => 'assets/files/Quraan/1.txt';
+
+  /// File path: assets/files/Quraan/10.txt
+  String get a10 => 'assets/files/Quraan/10.txt';
+
+  /// File path: assets/files/Quraan/100.txt
+  String get a100 => 'assets/files/Quraan/100.txt';
+
+  /// File path: assets/files/Quraan/101.txt
+  String get a101 => 'assets/files/Quraan/101.txt';
+
+  /// File path: assets/files/Quraan/102.txt
+  String get a102 => 'assets/files/Quraan/102.txt';
+
+  /// File path: assets/files/Quraan/103.txt
+  String get a103 => 'assets/files/Quraan/103.txt';
+
+  /// File path: assets/files/Quraan/104.txt
+  String get a104 => 'assets/files/Quraan/104.txt';
+
+  /// File path: assets/files/Quraan/105.txt
+  String get a105 => 'assets/files/Quraan/105.txt';
+
+  /// File path: assets/files/Quraan/106.txt
+  String get a106 => 'assets/files/Quraan/106.txt';
+
+  /// File path: assets/files/Quraan/107.txt
+  String get a107 => 'assets/files/Quraan/107.txt';
+
+  /// File path: assets/files/Quraan/108.txt
+  String get a108 => 'assets/files/Quraan/108.txt';
+
+  /// File path: assets/files/Quraan/109.txt
+  String get a109 => 'assets/files/Quraan/109.txt';
+
+  /// File path: assets/files/Quraan/11.txt
+  String get a11 => 'assets/files/Quraan/11.txt';
+
+  /// File path: assets/files/Quraan/110.txt
+  String get a110 => 'assets/files/Quraan/110.txt';
+
+  /// File path: assets/files/Quraan/111.txt
+  String get a111 => 'assets/files/Quraan/111.txt';
+
+  /// File path: assets/files/Quraan/112.txt
+  String get a112 => 'assets/files/Quraan/112.txt';
+
+  /// File path: assets/files/Quraan/113.txt
+  String get a113 => 'assets/files/Quraan/113.txt';
+
+  /// File path: assets/files/Quraan/114.txt
+  String get a114 => 'assets/files/Quraan/114.txt';
+
+  /// File path: assets/files/Quraan/12.txt
+  String get a12 => 'assets/files/Quraan/12.txt';
+
+  /// File path: assets/files/Quraan/13.txt
+  String get a13 => 'assets/files/Quraan/13.txt';
+
+  /// File path: assets/files/Quraan/14.txt
+  String get a14 => 'assets/files/Quraan/14.txt';
+
+  /// File path: assets/files/Quraan/15.txt
+  String get a15 => 'assets/files/Quraan/15.txt';
+
+  /// File path: assets/files/Quraan/16.txt
+  String get a16 => 'assets/files/Quraan/16.txt';
+
+  /// File path: assets/files/Quraan/17.txt
+  String get a17 => 'assets/files/Quraan/17.txt';
+
+  /// File path: assets/files/Quraan/18.txt
+  String get a18 => 'assets/files/Quraan/18.txt';
+
+  /// File path: assets/files/Quraan/19.txt
+  String get a19 => 'assets/files/Quraan/19.txt';
+
+  /// File path: assets/files/Quraan/2.txt
+  String get a2 => 'assets/files/Quraan/2.txt';
+
+  /// File path: assets/files/Quraan/20.txt
+  String get a20 => 'assets/files/Quraan/20.txt';
+
+  /// File path: assets/files/Quraan/21.txt
+  String get a21 => 'assets/files/Quraan/21.txt';
+
+  /// File path: assets/files/Quraan/22.txt
+  String get a22 => 'assets/files/Quraan/22.txt';
+
+  /// File path: assets/files/Quraan/23.txt
+  String get a23 => 'assets/files/Quraan/23.txt';
+
+  /// File path: assets/files/Quraan/24.txt
+  String get a24 => 'assets/files/Quraan/24.txt';
+
+  /// File path: assets/files/Quraan/25.txt
+  String get a25 => 'assets/files/Quraan/25.txt';
+
+  /// File path: assets/files/Quraan/26.txt
+  String get a26 => 'assets/files/Quraan/26.txt';
+
+  /// File path: assets/files/Quraan/27.txt
+  String get a27 => 'assets/files/Quraan/27.txt';
+
+  /// File path: assets/files/Quraan/28.txt
+  String get a28 => 'assets/files/Quraan/28.txt';
+
+  /// File path: assets/files/Quraan/29.txt
+  String get a29 => 'assets/files/Quraan/29.txt';
+
+  /// File path: assets/files/Quraan/3.txt
+  String get a3 => 'assets/files/Quraan/3.txt';
+
+  /// File path: assets/files/Quraan/30.txt
+  String get a30 => 'assets/files/Quraan/30.txt';
+
+  /// File path: assets/files/Quraan/31.txt
+  String get a31 => 'assets/files/Quraan/31.txt';
+
+  /// File path: assets/files/Quraan/32.txt
+  String get a32 => 'assets/files/Quraan/32.txt';
+
+  /// File path: assets/files/Quraan/33.txt
+  String get a33 => 'assets/files/Quraan/33.txt';
+
+  /// File path: assets/files/Quraan/34.txt
+  String get a34 => 'assets/files/Quraan/34.txt';
+
+  /// File path: assets/files/Quraan/35.txt
+  String get a35 => 'assets/files/Quraan/35.txt';
+
+  /// File path: assets/files/Quraan/36.txt
+  String get a36 => 'assets/files/Quraan/36.txt';
+
+  /// File path: assets/files/Quraan/37.txt
+  String get a37 => 'assets/files/Quraan/37.txt';
+
+  /// File path: assets/files/Quraan/38.txt
+  String get a38 => 'assets/files/Quraan/38.txt';
+
+  /// File path: assets/files/Quraan/39.txt
+  String get a39 => 'assets/files/Quraan/39.txt';
+
+  /// File path: assets/files/Quraan/4.txt
+  String get a4 => 'assets/files/Quraan/4.txt';
+
+  /// File path: assets/files/Quraan/40.txt
+  String get a40 => 'assets/files/Quraan/40.txt';
+
+  /// File path: assets/files/Quraan/41.txt
+  String get a41 => 'assets/files/Quraan/41.txt';
+
+  /// File path: assets/files/Quraan/42.txt
+  String get a42 => 'assets/files/Quraan/42.txt';
+
+  /// File path: assets/files/Quraan/43.txt
+  String get a43 => 'assets/files/Quraan/43.txt';
+
+  /// File path: assets/files/Quraan/44.txt
+  String get a44 => 'assets/files/Quraan/44.txt';
+
+  /// File path: assets/files/Quraan/45.txt
+  String get a45 => 'assets/files/Quraan/45.txt';
+
+  /// File path: assets/files/Quraan/46.txt
+  String get a46 => 'assets/files/Quraan/46.txt';
+
+  /// File path: assets/files/Quraan/47.txt
+  String get a47 => 'assets/files/Quraan/47.txt';
+
+  /// File path: assets/files/Quraan/48.txt
+  String get a48 => 'assets/files/Quraan/48.txt';
+
+  /// File path: assets/files/Quraan/49.txt
+  String get a49 => 'assets/files/Quraan/49.txt';
+
+  /// File path: assets/files/Quraan/5.txt
+  String get a5 => 'assets/files/Quraan/5.txt';
+
+  /// File path: assets/files/Quraan/50.txt
+  String get a50 => 'assets/files/Quraan/50.txt';
+
+  /// File path: assets/files/Quraan/51.txt
+  String get a51 => 'assets/files/Quraan/51.txt';
+
+  /// File path: assets/files/Quraan/52.txt
+  String get a52 => 'assets/files/Quraan/52.txt';
+
+  /// File path: assets/files/Quraan/53.txt
+  String get a53 => 'assets/files/Quraan/53.txt';
+
+  /// File path: assets/files/Quraan/54.txt
+  String get a54 => 'assets/files/Quraan/54.txt';
+
+  /// File path: assets/files/Quraan/55.txt
+  String get a55 => 'assets/files/Quraan/55.txt';
+
+  /// File path: assets/files/Quraan/56.txt
+  String get a56 => 'assets/files/Quraan/56.txt';
+
+  /// File path: assets/files/Quraan/57.txt
+  String get a57 => 'assets/files/Quraan/57.txt';
+
+  /// File path: assets/files/Quraan/58.txt
+  String get a58 => 'assets/files/Quraan/58.txt';
+
+  /// File path: assets/files/Quraan/59.txt
+  String get a59 => 'assets/files/Quraan/59.txt';
+
+  /// File path: assets/files/Quraan/6.txt
+  String get a6 => 'assets/files/Quraan/6.txt';
+
+  /// File path: assets/files/Quraan/60.txt
+  String get a60 => 'assets/files/Quraan/60.txt';
+
+  /// File path: assets/files/Quraan/61.txt
+  String get a61 => 'assets/files/Quraan/61.txt';
+
+  /// File path: assets/files/Quraan/62.txt
+  String get a62 => 'assets/files/Quraan/62.txt';
+
+  /// File path: assets/files/Quraan/63.txt
+  String get a63 => 'assets/files/Quraan/63.txt';
+
+  /// File path: assets/files/Quraan/64.txt
+  String get a64 => 'assets/files/Quraan/64.txt';
+
+  /// File path: assets/files/Quraan/65.txt
+  String get a65 => 'assets/files/Quraan/65.txt';
+
+  /// File path: assets/files/Quraan/66.txt
+  String get a66 => 'assets/files/Quraan/66.txt';
+
+  /// File path: assets/files/Quraan/67.txt
+  String get a67 => 'assets/files/Quraan/67.txt';
+
+  /// File path: assets/files/Quraan/68.txt
+  String get a68 => 'assets/files/Quraan/68.txt';
+
+  /// File path: assets/files/Quraan/69.txt
+  String get a69 => 'assets/files/Quraan/69.txt';
+
+  /// File path: assets/files/Quraan/7.txt
+  String get a7 => 'assets/files/Quraan/7.txt';
+
+  /// File path: assets/files/Quraan/70.txt
+  String get a70 => 'assets/files/Quraan/70.txt';
+
+  /// File path: assets/files/Quraan/71.txt
+  String get a71 => 'assets/files/Quraan/71.txt';
+
+  /// File path: assets/files/Quraan/72.txt
+  String get a72 => 'assets/files/Quraan/72.txt';
+
+  /// File path: assets/files/Quraan/73.txt
+  String get a73 => 'assets/files/Quraan/73.txt';
+
+  /// File path: assets/files/Quraan/74.txt
+  String get a74 => 'assets/files/Quraan/74.txt';
+
+  /// File path: assets/files/Quraan/75.txt
+  String get a75 => 'assets/files/Quraan/75.txt';
+
+  /// File path: assets/files/Quraan/76.txt
+  String get a76 => 'assets/files/Quraan/76.txt';
+
+  /// File path: assets/files/Quraan/77.txt
+  String get a77 => 'assets/files/Quraan/77.txt';
+
+  /// File path: assets/files/Quraan/78.txt
+  String get a78 => 'assets/files/Quraan/78.txt';
+
+  /// File path: assets/files/Quraan/79.txt
+  String get a79 => 'assets/files/Quraan/79.txt';
+
+  /// File path: assets/files/Quraan/8.txt
+  String get a8 => 'assets/files/Quraan/8.txt';
+
+  /// File path: assets/files/Quraan/80.txt
+  String get a80 => 'assets/files/Quraan/80.txt';
+
+  /// File path: assets/files/Quraan/81.txt
+  String get a81 => 'assets/files/Quraan/81.txt';
+
+  /// File path: assets/files/Quraan/82.txt
+  String get a82 => 'assets/files/Quraan/82.txt';
+
+  /// File path: assets/files/Quraan/83.txt
+  String get a83 => 'assets/files/Quraan/83.txt';
+
+  /// File path: assets/files/Quraan/84.txt
+  String get a84 => 'assets/files/Quraan/84.txt';
+
+  /// File path: assets/files/Quraan/85.txt
+  String get a85 => 'assets/files/Quraan/85.txt';
+
+  /// File path: assets/files/Quraan/86.txt
+  String get a86 => 'assets/files/Quraan/86.txt';
+
+  /// File path: assets/files/Quraan/87.txt
+  String get a87 => 'assets/files/Quraan/87.txt';
+
+  /// File path: assets/files/Quraan/88.txt
+  String get a88 => 'assets/files/Quraan/88.txt';
+
+  /// File path: assets/files/Quraan/89.txt
+  String get a89 => 'assets/files/Quraan/89.txt';
+
+  /// File path: assets/files/Quraan/9.txt
+  String get a9 => 'assets/files/Quraan/9.txt';
+
+  /// File path: assets/files/Quraan/90.txt
+  String get a90 => 'assets/files/Quraan/90.txt';
+
+  /// File path: assets/files/Quraan/91.txt
+  String get a91 => 'assets/files/Quraan/91.txt';
+
+  /// File path: assets/files/Quraan/92.txt
+  String get a92 => 'assets/files/Quraan/92.txt';
+
+  /// File path: assets/files/Quraan/93.txt
+  String get a93 => 'assets/files/Quraan/93.txt';
+
+  /// File path: assets/files/Quraan/94.txt
+  String get a94 => 'assets/files/Quraan/94.txt';
+
+  /// File path: assets/files/Quraan/95.txt
+  String get a95 => 'assets/files/Quraan/95.txt';
+
+  /// File path: assets/files/Quraan/96.txt
+  String get a96 => 'assets/files/Quraan/96.txt';
+
+  /// File path: assets/files/Quraan/97.txt
+  String get a97 => 'assets/files/Quraan/97.txt';
+
+  /// File path: assets/files/Quraan/98.txt
+  String get a98 => 'assets/files/Quraan/98.txt';
+
+  /// File path: assets/files/Quraan/99.txt
+  String get a99 => 'assets/files/Quraan/99.txt';
+
+  /// List of all assets
+  List<String> get values => [
+        a1,
+        a10,
+        a100,
+        a101,
+        a102,
+        a103,
+        a104,
+        a105,
+        a106,
+        a107,
+        a108,
+        a109,
+        a11,
+        a110,
+        a111,
+        a112,
+        a113,
+        a114,
+        a12,
+        a13,
+        a14,
+        a15,
+        a16,
+        a17,
+        a18,
+        a19,
+        a2,
+        a20,
+        a21,
+        a22,
+        a23,
+        a24,
+        a25,
+        a26,
+        a27,
+        a28,
+        a29,
+        a3,
+        a30,
+        a31,
+        a32,
+        a33,
+        a34,
+        a35,
+        a36,
+        a37,
+        a38,
+        a39,
+        a4,
+        a40,
+        a41,
+        a42,
+        a43,
+        a44,
+        a45,
+        a46,
+        a47,
+        a48,
+        a49,
+        a5,
+        a50,
+        a51,
+        a52,
+        a53,
+        a54,
+        a55,
+        a56,
+        a57,
+        a58,
+        a59,
+        a6,
+        a60,
+        a61,
+        a62,
+        a63,
+        a64,
+        a65,
+        a66,
+        a67,
+        a68,
+        a69,
+        a7,
+        a70,
+        a71,
+        a72,
+        a73,
+        a74,
+        a75,
+        a76,
+        a77,
+        a78,
+        a79,
+        a8,
+        a80,
+        a81,
+        a82,
+        a83,
+        a84,
+        a85,
+        a86,
+        a87,
+        a88,
+        a89,
+        a9,
+        a90,
+        a91,
+        a92,
+        a93,
+        a94,
+        a95,
+        a96,
+        a97,
+        a98,
+        a99
+      ];
+}
+
 class Assets {
   const Assets._();
 
+  static const $AssetsFilesGen files = $AssetsFilesGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }

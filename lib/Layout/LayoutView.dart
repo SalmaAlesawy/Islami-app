@@ -8,7 +8,7 @@ import 'package:islamiapp/Time/TimeView.dart';
 import '../core/gen/assets.gen.dart';
 
 class LayoutView extends StatefulWidget {
-  static const String routeName="/layout_view";
+  static const String routeName= "/layout";
   const LayoutView({super.key});
 
   @override
@@ -16,6 +16,7 @@ class LayoutView extends StatefulWidget {
 }
 
 class _LayoutViewState extends State<LayoutView> {
+
   int selectedIndex = 0;
   List<Widget> screens=[
     const Quraanview(),

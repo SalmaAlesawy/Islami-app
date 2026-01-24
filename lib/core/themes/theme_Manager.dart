@@ -24,7 +24,7 @@ abstract class ThemeManager {
           headlineSmall: TextStyle(
               fontFamily: "Janna",
               fontSize: 24,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w700,
               color: AppColors.white),
           bodyLarge: TextStyle(
               fontFamily: "Janna",
@@ -41,7 +41,6 @@ abstract class ThemeManager {
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: AppColors.white),
-
 
 
       ),

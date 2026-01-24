@@ -17,7 +17,7 @@ class Hadithview extends StatefulWidget {
 class _HadithviewState extends State<Hadithview> {
   @override
   Widget build(BuildContext context) {
-    if (Hadith.isEmpty) loadDataFromAssets();
+    if (hadith.isEmpty) loadDataFromAssets();
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -34,7 +34,7 @@ class _HadithviewState extends State<Hadithview> {
            padding: const EdgeInsets.all(32),
            child: Image(image: Assets.images.quraanHeader.provider(),width: 350,),
          ),
-          CarouselSlider(items: Hadith.map((e)=> Hadithdetails(hadithData: e,)).toList(), options:CarouselOptions(
+          CarouselSlider(items: hadith.map((e)=> Hadithdetails(hadithData: e,)).toList(), options:CarouselOptions(
             height: MediaQuery.of(context).size.height*0.6,
             aspectRatio: 16/9,
             viewportFraction: 0.8,
@@ -54,7 +54,7 @@ class _HadithviewState extends State<Hadithview> {
 
     );
   }
-  List<HadithData> Hadith = [];
+  List<HadithData> hadith = [];
 
   Future<void> loadDataFromAssets() async {
     for (int i = 1; i <= 50; i++) {
@@ -68,7 +68,7 @@ class _HadithviewState extends State<Hadithview> {
         hadithText: hadithBody,
         hadithTitle: hadithTitle,
       );
-      Hadith.add(hadithData);
+      hadith.add(hadithData);
       setState(() {
       });
 

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:introduction_screen/introduction_screen.dart';
+import 'package:introduction_screen/introduction_screen.dart' show IntroductionScreen, PageViewModel, DotsDecorator;
 import 'package:islamiapp/Layout/LayoutView.dart';
 import 'package:islamiapp/core/themes/AppColors.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../core/gen/assets.gen.dart';
 import 'onboarding_pages.dart';
 

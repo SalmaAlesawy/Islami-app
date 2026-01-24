@@ -22,7 +22,7 @@ class _HadithdetailsState extends State<Hadithdetails> {
       body: Container(
         height: double.infinity,
         decoration: BoxDecoration(
-          color: AppColors.primaryColor,
+          color: AppColors.scaffoldBackGroundColor,
           borderRadius: BorderRadius.circular(20),
         ),
         child: SingleChildScrollView(

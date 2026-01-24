@@ -160,6 +160,10 @@ class $AssetsImagesGen {
   AssetGenImage get sebhsbody =>
       const AssetGenImage('assets/images/sebhsbody.png');
 
+  /// File path: assets/images/soundWave.png
+  AssetGenImage get soundWave =>
+      const AssetGenImage('assets/images/soundWave.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
     hadithBackground,
@@ -183,6 +187,7 @@ class $AssetsImagesGen {
     imgSurNumberFrame,
     quraanHeader,
     sebhsbody,
+    soundWave,
   ];
 }
 

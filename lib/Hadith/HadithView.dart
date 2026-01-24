@@ -22,59 +22,57 @@ class _HadithviewState extends State<Hadithview> {
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
-        image: DecorationImage(image:Assets.images.hadithBackground.provider()
-        ,fit: BoxFit.cover
-        )
-
-      ),
-      child:
-      Column(
+          image: DecorationImage(
+              image: Assets.images.hadithBackground.provider(),
+              fit: BoxFit.cover)),
+      child: Column(
         children: [
-         Padding(
-           padding: const EdgeInsets.all(32),
-           child: Image(image: Assets.images.quraanHeader.provider(),width: 350,),
-         ),
-          CarouselSlider(items: hadith.map((e)=> Hadithdetails(hadithData: e,)).toList(), options:CarouselOptions(
-            height: MediaQuery.of(context).size.height*0.6,
-            aspectRatio: 16/9,
-            viewportFraction: 0.8,
-            initialPage: 0,
-            enableInfiniteScroll: true,
-            autoPlay: true,
-            autoPlayAnimationDuration: Duration(seconds: 2),
-            reverse: false,
-            enlargeCenterPage: true,
-            enlargeFactor: 0.3,
-            scrollDirection: Axis.horizontal,
-          ) )
-
-
+          Padding(
+            padding: const EdgeInsets.all(32),
+            child: Image(
+              image: Assets.images.quraanHeader.provider(),
+              width: 350,
+            ),
+          ),
+          CarouselSlider(
+              items: hadith
+                  .map((e) => Hadithdetails(
+                        hadithData: e,
+                      ))
+                  .toList(),
+              options: CarouselOptions(
+                height: MediaQuery.of(context).size.height * 0.6,
+                aspectRatio: 16 / 9,
+                viewportFraction: 0.8,
+                initialPage: 0,
+                enableInfiniteScroll: true,
+                autoPlay: false,
+                reverse: false,
+                enlargeCenterPage: true,
+                enlargeFactor: 0.3,
+                scrollDirection: Axis.horizontal,
+              ))
         ],
       ),
-
     );
   }
+
   List<HadithData> hadith = [];
 
   Future<void> loadDataFromAssets() async {
     for (int i = 1; i <= 50; i++) {
-      String HadithText =
-      await rootBundle.loadString("assets/files/Hadeeth/h$i.txt");
-      int titleLength = HadithText.trim().indexOf("\n");
-      String hadithTitle = HadithText.substring(0, titleLength);
-      String hadithBody = HadithText.substring(titleLength + 1);
+      String hadithText =
+          await rootBundle.loadString("assets/files/Hadeeth/h$i.txt");
+      int titleLength = hadithText.trim().indexOf("\n");
+      String hadithTitle = hadithText.substring(0, titleLength);
+      String hadithBody = hadithText.substring(titleLength + 1);
 
       HadithData hadithData = HadithData(
         hadithText: hadithBody,
         hadithTitle: hadithTitle,
       );
       hadith.add(hadithData);
-      setState(() {
-      });
-
+      setState(() {});
     }
-
-
   }
-
 }

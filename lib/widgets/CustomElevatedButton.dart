@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../core/themes/AppColors.dart';
 
 class Customelevatedbutton extends StatelessWidget {
-  const Customelevatedbutton({super.key, required this.buttonText, required this.buttonColor, required this.textColor});
+  const Customelevatedbutton({super.key, required this.buttonText, required this.buttonColor, required this.textColor,required this.onPressed});
   final String buttonText;
   final Color buttonColor;
   final Color textColor;
+  final void Function()? onPressed;
 
 
   @override
@@ -20,10 +20,7 @@ class Customelevatedbutton extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10))),
                 backgroundColor:
                      WidgetStatePropertyAll(buttonColor)),
-            onPressed: () {
-
-
-            },
+            onPressed:onPressed,
             child: Text(
               buttonText,
               style: textTheme.titleLarge

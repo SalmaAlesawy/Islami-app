@@ -4,14 +4,14 @@ import '../core/gen/assets.gen.dart';
 import '../core/themes/AppColors.dart';
 
 class Customlistview extends StatefulWidget {
-  Customlistview({super.key});
+  Customlistview({super.key, required this.cardText});
+  final String cardText;
 
   @override
   State<Customlistview> createState() => _CustomlistviewState();
 }
 
 class _CustomlistviewState extends State<Customlistview> {
-  
   bool isSilent = false;
   bool isPlayed = false;
 
@@ -33,16 +33,25 @@ class _CustomlistviewState extends State<Customlistview> {
               alignment: AlignmentGeometry.center,
               children: [
                 Positioned.fill(
-                  top: 40,
-                  child: Assets.images.imgBottomDecoration
-                      .image(width: double.infinity, fit: BoxFit.cover,color: Colors.black26),
-                ),
+                    top:isPlayed==false? 40: 70,
+                    bottom: isPlayed==false? 0:-50,
+                    child: isPlayed == false
+                        ? Assets.images.imgBottomDecoration.image(
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                            color: Colors.black26)
+                        : Assets.images.soundWave.image(width: 517,
+                        height: 97,
+                        cacheHeight: 97,
+                        alignment: Alignment.bottomCenter,
+                        fit: BoxFit.fitHeight,
+                        color: Colors.black26)),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "Radio Ibrahim Al-Akdar",
+                     widget.cardText,
                       style: textTheme.bodyLarge
                           ?.copyWith(color: AppColors.scaffoldBackGroundColor),
                     ),
@@ -64,12 +73,13 @@ class _CustomlistviewState extends State<Customlistview> {
                                     size: 50,
                                     color: AppColors.scaffoldBackGroundColor,
                                   )
-                                : const Icon(Icons.pause,size: 50,
-                                color: AppColors.scaffoldBackGroundColor)),
+                                : const Icon(Icons.pause,
+                                    size: 50,
+                                    color: AppColors.scaffoldBackGroundColor)),
                         IconButton(
                             onPressed: () {
                               setState(() {
-                                isSilent=!isSilent;
+                                isSilent = !isSilent;
                               });
                             },
                             icon: isSilent == false
@@ -78,8 +88,9 @@ class _CustomlistviewState extends State<Customlistview> {
                                     size: 50,
                                     color: AppColors.scaffoldBackGroundColor,
                                   )
-                                : const Icon(Icons.volume_off_rounded,size: 50,
-                                color: AppColors.scaffoldBackGroundColor))
+                                : const Icon(Icons.volume_off_rounded,
+                                    size: 50,
+                                    color: AppColors.scaffoldBackGroundColor))
                       ],
                     )
                   ],

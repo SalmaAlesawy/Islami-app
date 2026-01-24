@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:islamiapp/Models/Hadith_data.dart';
 
 import '../core/gen/assets.gen.dart';
@@ -22,7 +21,7 @@ class _HadithdetailsState extends State<Hadithdetails> {
       body: Container(
         height: double.infinity,
         decoration: BoxDecoration(
-          color: AppColors.scaffoldBackGroundColor,
+          color: AppColors.primaryColor,
           borderRadius: BorderRadius.circular(20),
         ),
         child: SingleChildScrollView(

@@ -11,22 +11,22 @@ class SebhaView extends StatefulWidget {
 class _SebhaViewState extends State<SebhaView> {
   List<String> Azkar = [
     "سبحان الله",
-        "الحمد لله",
+    "الحمد لله",
     "الله أكبر",
     "لا إله إلا الله",
   ];
   int count = 0;
-  void ReadAzkar(){
-    if(count==30&& index<Azkar.length){
+  void ReadAzkar() {
+    if (count == 30 && index < Azkar.length) {
       index++;
-      count=0;
-      if(index==Azkar.length){
-        index=0;
+      count = 0;
+      if (index == Azkar.length) {
+        index = 0;
       }
     }
   }
 
-  int index =0;
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -56,30 +56,29 @@ class _SebhaViewState extends State<SebhaView> {
             Expanded(
               child: InkWell(
                 onTap: () {
-
                   count++;
                   ReadAzkar();
                   setState(() {});
                 },
                 child: Stack(
-                  alignment: AlignmentGeometry.center,
+                  alignment: Alignment.center,
                   children: [
                     Assets.images.sebhsbody.image(),
                     Container(
-                      alignment: AlignmentGeometry.center,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            Azkar[index],
-                            style: textTheme.headlineMedium,
-                          ),
-                          Text(
-                            count.toString(),
-                            style: textTheme.headlineMedium,
-                          )
-                        ],
+                      child: Positioned(
+                        bottom: 200,
+                        child: Column(
+                          children: [
+                            Text(
+                              Azkar[index],
+                              style: textTheme.headlineMedium,
+                            ),
+                            Text(
+                              count.toString(),
+                              style: textTheme.headlineMedium,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -92,4 +91,3 @@ class _SebhaViewState extends State<SebhaView> {
     );
   }
 }
-

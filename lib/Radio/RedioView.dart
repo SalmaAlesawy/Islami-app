@@ -13,9 +13,10 @@ class RadioView extends StatefulWidget {
 }
 
 class _RadioViewState extends State<RadioView> {
+  PageController pageController = PageController();
+  bool isReciters=false;
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -27,22 +28,42 @@ class _RadioViewState extends State<RadioView> {
         child: Column(
           children: [
             Assets.images.quraanHeader.image(height: 171, width: 291),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Customelevatedbutton(
-                      buttonText: "Radio",
-                      buttonColor: AppColors.primaryColor,
-                      textColor: AppColors.scaffoldBackGroundColor),
-                  SizedBox(
+                    buttonText: "Radio",
+                    buttonColor:isReciters==false? AppColors.primaryColor:Colors.transparent,
+                    textColor:isReciters==false? AppColors.scaffoldBackGroundColor:Colors.white,
+                    onPressed: () {
+                      setState(() {
+
+                      });
+                      isReciters=false;
+                      pageController.animateToPage(0,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut);
+                    },
+                  ),
+                  const SizedBox(
                     width: 10,
                   ),
                   Customelevatedbutton(
-                      buttonText: "Reciters",
-                      buttonColor: Colors.transparent,
-                      textColor: Colors.white)
+                    buttonText: "Reciters",
+                    buttonColor:isReciters==true? AppColors.primaryColor:Colors.transparent,
+                    textColor:isReciters==true?AppColors.scaffoldBackGroundColor:Colors.transparent,
+                    onPressed: () {
+                      setState(() {
+
+                      });
+                      isReciters=true;
+                      pageController.animateToPage(1,
+                          duration: const Duration(seconds: 1),
+                          curve: Curves.easeInOut);
+                    },
+                  )
                 ],
               ),
             ),
@@ -50,33 +71,34 @@ class _RadioViewState extends State<RadioView> {
               height: 10,
             ),
             Expanded(
-                child: PageView(
-                  children:[ ListView.separated(
-                    shrinkWrap: true,
-                                separatorBuilder: (context, index) => const SizedBox(
-                  height: 13,
-                                ),
-                                itemBuilder: (context, index) => Customlistview(),
-                                itemCount: 5,
-                                scrollDirection: Axis.vertical,
-                              ),
-                    ListView.separated(
-                      shrinkWrap: true,
-                      separatorBuilder: (context, index) => const SizedBox(
-                        height: 13,
-                      ),
-                      itemBuilder: (context, index) => Customlistview(),
-                      itemCount: 5,
-                      scrollDirection: Axis.vertical,
-                    )
-                  ]
+              child: PageView(controller: pageController, children: [
+                ListView.separated(
+                  shrinkWrap: true,
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 13,
+                  ),
+                  itemBuilder: (context, index) => Customlistview(
+                    cardText: "Radio Ibrahim Al-Akdar",
+                  ),
+                  itemCount: 5,
+                  scrollDirection: Axis.vertical,
                 ),
-
+                ListView.separated(
+                  shrinkWrap: true,
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 13,
+                  ),
+                  itemBuilder: (context, index) => Customlistview(
+                    cardText: "Ibrahim Al-Akdar",
+                  ),
+                  itemCount: 5,
+                  scrollDirection: Axis.vertical,
+                )
+              ]),
             )
           ],
         ),
       ),
     );
-
   }
 }

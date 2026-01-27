@@ -19,7 +19,6 @@ class _OnBoardingState extends State<OnBoarding> {
   late TextTheme textTheme = Theme.of(context).textTheme;
   List<PageViewModel> listPageViewModel = [
     PageViewModel(
-        useScrollView: false,
         title: "",
         bodyWidget: Builder(
             builder: (context) => OnboardingPages(

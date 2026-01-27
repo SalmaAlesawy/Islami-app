@@ -14,7 +14,7 @@ class RadioView extends StatefulWidget {
 
 class _RadioViewState extends State<RadioView> {
   PageController pageController = PageController();
-  bool isReciters=false;
+  bool? isReciters=false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,7 +41,6 @@ class _RadioViewState extends State<RadioView> {
                       setState(() {
 
                       });
-                      isReciters=false;
                       pageController.animateToPage(0,
                           duration: const Duration(seconds: 1),
                           curve: Curves.easeInOut);
@@ -53,12 +52,11 @@ class _RadioViewState extends State<RadioView> {
                   Customelevatedbutton(
                     buttonText: "Reciters",
                     buttonColor:isReciters==true? AppColors.primaryColor:Colors.transparent,
-                    textColor:isReciters==true?AppColors.scaffoldBackGroundColor:Colors.transparent,
+                    textColor:isReciters==true?AppColors.scaffoldBackGroundColor:Colors.white,
                     onPressed: () {
                       setState(() {
 
                       });
-                      isReciters=true;
                       pageController.animateToPage(1,
                           duration: const Duration(seconds: 1),
                           curve: Curves.easeInOut);
@@ -71,7 +69,14 @@ class _RadioViewState extends State<RadioView> {
               height: 10,
             ),
             Expanded(
-              child: PageView(controller: pageController, children: [
+              child: PageView(
+                  onPageChanged: (value) {
+                    isReciters=!isReciters!;
+                    setState(() {
+
+                    });
+                  },
+                  controller: pageController, children: [
                 ListView.separated(
                   shrinkWrap: true,
                   separatorBuilder: (context, index) => const SizedBox(

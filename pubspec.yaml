@@ -70,7 +70,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/files/Hadeeth/
-    - assets/files/Quraan/
+    - assets/files/quraan/
   fonts:
     - family: "Janna"
       fonts:

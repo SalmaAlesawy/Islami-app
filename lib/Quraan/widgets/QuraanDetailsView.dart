@@ -17,10 +17,9 @@ class Quraandetailsview extends StatefulWidget {
 class _QuraandetailsviewState extends State<Quraandetailsview> {
   @override
   Widget build(BuildContext context) {
-
     TextTheme textTheme = Theme.of(context).textTheme;
     SuraData suraData = ModalRoute.of(context)?.settings.arguments as SuraData;
-    if(verses.isEmpty) loadDataFromAssets(suraData.suraNumber);
+    if (verses.isEmpty) loadDataFromAssets(suraData.suraNumber);
     return Scaffold(
       appBar: AppBar(
         title: Text(suraData.englishSuraName),
@@ -56,16 +55,21 @@ class _QuraandetailsviewState extends State<Quraandetailsview> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding:  const EdgeInsets.all(16.0),
                       child: ListView.builder(
                         itemCount: verses.length,
                         itemBuilder: (context, index) {
-                          return Text(
-                            "{${index + 1}} ${verses[index]}",
-                            style: textTheme.bodyLarge?.copyWith(
-                              color: AppColors.primaryColor,
-                            ),
-                            textAlign: TextAlign.center,
+                          return Column(
+                            children: [
+                              Text(
+                                "{${index + 1}} ${verses[index]}",
+                                style: textTheme.bodyLarge?.copyWith(
+                                  color: AppColors.primaryColor,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+
+                            ],
                           );
                         },
                       ),
@@ -83,8 +87,9 @@ class _QuraandetailsviewState extends State<Quraandetailsview> {
   List<String> verses = [];
 
   Future<void> loadDataFromAssets(String suraNumber) async {
-    String quranText = await rootBundle.loadString("assets/files/Quraan/$suraNumber.txt");
-
+    String quranText =
+        await rootBundle.loadString("assets/files/quraan/$suraNumber.txt");
+print(quranText);
     setState(() {
       verses = quranText.split("\n");
     });

@@ -27,6 +27,7 @@ class _SebhaViewState extends State<SebhaView> {
   }
 
   int index = 0;
+  Image sebhaImage =Assets.images.sebhsbody.image();
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -58,12 +59,16 @@ class _SebhaViewState extends State<SebhaView> {
                 onTap: () {
                   count++;
                   ReadAzkar();
+                  RotationTransition(turns: const AlwaysStoppedAnimation(15/360),
+                  child: sebhaImage,
+                  );
                   setState(() {});
                 },
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    Assets.images.sebhsbody.image(),
+
+                    sebhaImage,
                     Container(
                       child: Positioned(
                         bottom: 200,

@@ -17,29 +17,28 @@ class _SebhaViewState extends State<SebhaView> {
   ];
   int count = 0;
   void ReadAzkar() {
-    if (count == 30 && index < Azkar.length) {
+    if (count == 31 && index <= Azkar.length) {
       index++;
       count = 0;
-      if (index == Azkar.length) {
+      if (index == Azkar.length+1) {
         index = 0;
       }
     }
   }
 
   int index = 0;
-  Image sebhaImage =Assets.images.sebhsbody.image();
+  double rotation = 0;
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: Assets.images.sebhaBackground.provider(),
-              fit: BoxFit.cover)),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
+    return SafeArea(
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: Assets.images.sebhaBackground.provider(),
+                fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -59,20 +58,25 @@ class _SebhaViewState extends State<SebhaView> {
                 onTap: () {
                   count++;
                   ReadAzkar();
-                  RotationTransition(turns: const AlwaysStoppedAnimation(15/360),
-                  child: sebhaImage,
-                  );
+                  rotation += 15 / 360;
+
                   setState(() {});
                 },
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-
-                    sebhaImage,
-                    Container(
-                      child: Positioned(
-                        bottom: 200,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      RotationTransition(
+                          turns: AlwaysStoppedAnimation(rotation),
+                          child: Assets.images.sebhsbody.image(
+                              width: 378.9999694824219,
+                              height: 460.0002746582031)),
+                      Positioned(
+                        bottom: 190,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               Azkar[index],
@@ -85,8 +89,8 @@ class _SebhaViewState extends State<SebhaView> {
                           ],
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             )

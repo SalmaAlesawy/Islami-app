@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/core/gen/assets.gen.dart';
 import 'package:islamiapp/core/themes/AppColors.dart';
-import 'package:islamiapp/widgets/CustomElevatedButton.dart';
-
-import '../widgets/CustomListView.dart';
+import 'package:islamiapp/features/Radio/widgets/CustomElevatedButton.dart';
+import 'package:islamiapp/features/Radio/widgets/CustomListView.dart';
 
 class RadioView extends StatefulWidget {
   const RadioView({super.key});

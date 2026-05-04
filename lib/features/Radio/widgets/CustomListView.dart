@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../core/gen/assets.gen.dart';
-import '../core/themes/AppColors.dart';
+import '../../../core/gen/assets.gen.dart';
+import '../../../core/themes/AppColors.dart';
 
 class Customlistview extends StatefulWidget {
   Customlistview({super.key, required this.cardText});

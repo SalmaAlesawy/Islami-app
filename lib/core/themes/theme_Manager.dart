@@ -54,5 +54,21 @@ abstract class ThemeManager {
               fontSize: 20,
               fontWeight: FontWeight.w700),
           iconTheme: IconThemeData(color: AppColors.primaryColor),
-          foregroundColor: AppColors.primaryColor));
+          foregroundColor: AppColors.primaryColor),
+    inputDecorationTheme: InputDecorationTheme(
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:
+            const BorderSide(color: AppColors.primaryColor)),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:
+            const BorderSide(color: AppColors.primaryColor)),
+        focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:
+            const BorderSide(color: AppColors.primaryColor)),
+        labelStyle: const TextStyle(color: Colors.white)
+    )
+  );
 }

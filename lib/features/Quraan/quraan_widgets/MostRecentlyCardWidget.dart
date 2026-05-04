@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:islamiapp/Models/SuraDataModel.dart';
 import 'package:islamiapp/core/themes/AppColors.dart';
-
-import '../../core/gen/assets.gen.dart';
+import '../../../core/gen/assets.gen.dart';
 
 class Mostrecentlycardwidget extends StatelessWidget {
-  const Mostrecentlycardwidget({super.key});
+  const Mostrecentlycardwidget({super.key, required this.mostRecent});
+  final SuraDataModel mostRecent;
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +24,16 @@ class Mostrecentlycardwidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Al-Anbiya",
+                 mostRecent.englishSuraName,
                   style: textTheme.titleLarge?.copyWith(
                     color: Colors.black,
                   ),
                 ),
-                Text("الأنبياء",
+                Text(mostRecent.arabicSuraName,
                     style: textTheme.titleLarge?.copyWith(
                       color: Colors.black,
                     )),
-                Text("112 Verses ",
+                Text("Number of ayas: ${mostRecent.ayaNumber}",
                     style: textTheme.bodyMedium?.copyWith(
                       color: Colors.black,
                     ))

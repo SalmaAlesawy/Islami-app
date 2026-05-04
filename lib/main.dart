@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/Layout/LayoutView.dart';
-import 'package:islamiapp/Quraan/widgets/QuraanDetailsView.dart';
-import 'package:islamiapp/Splash/Splash_view.dart';
+import 'package:islamiapp/core/routes/app_router.dart';
+import 'package:islamiapp/core/routes/page_route_names.dart';
 import 'package:islamiapp/core/themes/theme_Manager.dart';
-
-import 'OnBoarding/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,13 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeManager.themeData,
-      initialRoute: SplashView.routeName,
-      routes: {
-        SplashView.routeName: (context) => const SplashView(),
-        Quraandetailsview.routeName: (context) => const Quraandetailsview(),
-        LayoutView.routeName: (context) => const LayoutView(),
-        OnBoarding.routeName: (context) => OnBoarding(),
-      },
+      initialRoute: PageRouteNames.splashScreen,
+      onGenerateRoute: AppRouter.onGenerateRoute,
       debugShowCheckedModeBanner: false,
     );
   }

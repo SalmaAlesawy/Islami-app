@@ -2,10 +2,11 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islamiapp/Hadith/HadithDetails.dart';
 import 'package:islamiapp/core/gen/assets.gen.dart';
 
-import '../Models/Hadith_data.dart';
+import '../../Models/Hadith_model.dart';
+import 'HadithDetails.dart';
+
 
 class Hadithview extends StatefulWidget {
   const Hadithview({super.key});

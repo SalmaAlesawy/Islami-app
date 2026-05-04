@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/Models/SuraData.dart';
-
-import '../../core/gen/assets.gen.dart';
+import 'package:islamiapp/Models/SuraDataModel.dart';
+import '../../../core/gen/assets.gen.dart';
 
 class Suracardwidget extends StatelessWidget {
   const Suracardwidget({super.key, required this.suraData});
-  final SuraData suraData;
+
+  final SuraDataModel suraData;
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    TextTheme textTheme = Theme
+        .of(context)
+        .textTheme;
 
     return Padding(
       padding: const EdgeInsets.symmetric(
@@ -34,7 +36,7 @@ class Suracardwidget extends StatelessWidget {
           const SizedBox(width: 20,),
           Column(
             children: [
-              Text(suraData.englishSuraName,style: textTheme.titleLarge,),
+              Text(suraData.englishSuraName, style: textTheme.titleLarge,),
               Text(
                 "${suraData.ayaNumber} Verses",
                 style: textTheme.bodyMedium,
@@ -42,7 +44,7 @@ class Suracardwidget extends StatelessWidget {
             ],
           ),
           const Spacer(),
-           Text(suraData.arabicSuraName)
+          Text(suraData.arabicSuraName)
         ],
       ),
     );

@@ -1,9 +1,9 @@
-class SuraData {
+class SuraDataModel {
   final String arabicSuraName;
   final String englishSuraName;
   final String suraNumber;
   final String ayaNumber;
-  SuraData({
+  SuraDataModel({
     required this.arabicSuraName,
     required this.englishSuraName,
     required this.suraNumber,

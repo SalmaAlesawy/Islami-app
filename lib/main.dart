@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/core/routes/app_router.dart';
 import 'package:islamiapp/core/routes/page_route_names.dart';
-import 'package:islamiapp/core/themes/theme_Manager.dart';
+import 'package:islamiapp/core/themes/theme_manager.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

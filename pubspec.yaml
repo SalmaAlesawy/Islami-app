@@ -24,7 +24,8 @@ dependencies:
   dio: ^5.9.2
   dartz: ^0.10.1
   json_annotation: ^4.12.0
-
+  audioplayers: ^6.5.0
+  jni: ^1.0.0
 
 dev_dependencies:
   flutter_test:

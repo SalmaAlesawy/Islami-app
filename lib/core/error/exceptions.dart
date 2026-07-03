@@ -69,5 +69,7 @@ throw ServerExceptions(
 errorModel: ErrorModel.fromJson(e.response?.data),
 );
 }
+  case DioExceptionType.transformTimeout:
+    throw UnimplementedError();
 }
 }
